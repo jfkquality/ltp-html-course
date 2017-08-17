@@ -1,1 +1,1 @@
-# ltp-html-course
+# JFK's HTML Repository
