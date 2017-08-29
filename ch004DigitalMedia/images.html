@@ -2,10 +2,21 @@
 <html>
   <head>
     <title>Images</title>
+    <style>
+      img {
+        max-width: 15%;
+        width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
+    <picture>
+      <source srcset="../images/SnoopyThanksgiving3.jpg" media="(max-width:1000px)" />
+      <img src="../images/CharlieBrown-Linus-Snow.jpg" alt="Snoopy Thanksgiving" />
+    </picture>
     <h1>LearnToProgram Staff</h1>
-    <p><a href="http://www.fairfieldct.org"><img width="33%" src= "../images/CharlieBrown-Linus-Snow.jpg" alt="Charlie Brown image" /></a><br/>Fairfield, CT</p>
+    <p><a href="http://www.fairfieldct.org"><img src= "../images/CharlieBrown-Linus-Snow.jpg" alt="Charlie Brown image" /></a><br/>Fairfield, CT</p>
     <h2>Charlie Brown & Linus</h2>
     <h3>In the snow</h3>
     <p><a href="https://www.google.com"><img width="33%" src="../images/KITT-Car-Knightrider - Copy.jpg" alt="KITT Knightrider" /><br/>Google. Include text with link.  </a></p>
