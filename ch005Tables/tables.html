@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+            table {
+                width: 100%;
+            }
+            table, tr, td, th {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th {
+                background-color: black;
+                color: white;
+            }
+            caption {
+                color: red;
+                font-weight: bold;                
+            }
+            .topRow {
+                width: 50%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <table>
+            <caption>Mark's Song Ratings</caption>
+            <tr>
+                <th>Song</th><th>Artist</th><th>Rating</th>
+            </tr>
+            <tr>
+                <td>Faithfully</td><td>Journey</td><td>****</td>
+            </tr>
+            <tr>
+                <td>Keep On Loving You</td><td rowspan="3">REO Speedwagon</td><td>*****</td>
+            </tr>
+            <tr>
+                <td>Time For Me to Fly</td><td>*****</td>
+            </tr>
+            <tr>
+                <td>Another REO Song</td><td>****</td>
+            </tr>
+            <tr>
+                <td>Surrender</td><td>Cheap Trick</td><td>***</td>
+            </tr>
+            <tr>
+                <td>Plainsong</td><td>The Cure</td><td>*****</td>
+            </tr>
+            <tr>
+                <td>Goodbye To You</td><td rowspan="2">Scandal</td><td>*****</td>
+            </tr>
+            <tr>
+                <td>Broken Wings</td><<td>***</td>
+            </tr>
+            <tr>
+                <td>Kyrie</td><td>Mr. Mister</td><td>****</td>
+            </tr>
+        </table>
+    </body>
+</html>
