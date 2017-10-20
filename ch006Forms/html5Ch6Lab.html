@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 Chapter 5 Lab: Intake Form</title>
+        <style>
+            ul {
+                list-style-type: none;
+            }
+            legend {
+                column-span: all;
+            }
+            .rowItem {
+                float: left;
+                padding-right: 40px;
+                /* padding: 0 20px; */
+            }
+            textarea {
+                size: 400px;
+            }
+            .allergy {
+                padding-right: 10px;
+            }
+            .wrappingColumns {
+                column-count: 4;
+                column-rule: 1px solid;
+            }
+            .yesNo {
+                float: right;
+            }
+            .diseases {
+                padding-left: 0;
+            }
+            .question {
+                float: left;
+            }
+            .answers {
+                float: right;
+            }
+            .noBorder {
+                border: 0;
+            }
+            #signature {
+                border: 1px solid;
+                border-left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" method="post">
+            <label for="patient" >Patient Name</label>
+            <input type="text" id="patient" name="patient" required="required" />
+            <label for="dob" method="post">Birth Date</label>
+            <input type="text" id="dob" required="required" />
+            <p>Although dental personnel primarily treat the area in and around your mouth, your mouth is a part of your entire body. Health problems that you may have, or medication that you may be taking, could have an important interrelationship with the dentistry you will receive. Thank you for answering the following questions.</p>
+
+            <div id="history">
+                <ul>
+                    <li>
+                        Question 1: 
+                        <label for="qu1Yes">Yes</label>
+                        <input type="radio" id="qu1Yes" name="question1" />
+                        <label for="qu1No">No</label>
+                        <input type="radio" id="qu1No" name="question1" />
+                        <label for="qu1Note">If yes, please explain</label>
+                        <input type="text" id="qu1Note" for="question1" />
+                    </li>
+                    <li>
+                        Question 2: 
+                        <label for="qu2Yes">Yes</label>
+                        <input type="radio" id="qu2Yes" name="question2" />
+                        <label for="qu2No">No</label>
+                        <input type="radio" id="qu2No" name="question2" />
+                        <label for="qu2Note">If yes, please explain</label>
+                        <input type="text" id="qu2Note" for="question2" />
+                    </li>
+                    <li>
+                        Question 3: 
+                        <label for="qu3Yes">Yes</label>
+                        <input type="radio" id="qu3Yes" name="question3" />
+                        <label for="qu3No">No</label>
+                        <input type="radio" id="qu3No" name="question3" />
+                        <label for="qu3Note">If yes, please explain</label>
+                        <input type="text" id="qu3Note" for="question3" />
+                    </li>
+                    <li>
+                        Question 4: 
+                        <label for="qu4Yes">Yes</label>
+                        <input type="radio" id="qu4Yes" name="question4" />
+                        <label for="qu4No">No</label>
+                        <input type="radio" id="qu4No" name="question4" />
+                        <label for="qu4Note">If yes, please explain</label>
+                        <input type="text" id="qu4Note" for="question4" />
+                    </li>
+                    <li>
+                        Question 5: 
+                        <label for="qu5Yes">Yes</label>
+                        <input type="radio" id="qu5Yes" name="question5" />
+                        <label for="qu5No">No</label>
+                        <input type="radio" id="qu5No" name="question5" />
+                        <label for="qu5Note">If yes, please explain</label>
+                        <input type="text" id="qu5Note" for="question5" />
+                    </li>
+                    <li>
+                        Question 6: 
+                        <label for="qu6Yes">Yes</label>
+                        <input type="radio" id="qu6Yes" name="question6" />
+                        <label for="qu6No">No</label>
+                        <input type="radio" id="qu6No" name="question6" />
+                        <label for="qu6Note">If yes, please explain</label>
+                        <input type="text" id="qu6Note" for="question6" />
+                    </li>
+                    <li>
+                        Question 7: 
+                        <label for="qu7Yes">Yes</label>
+                        <input type="radio" id="qu7Yes" name="question7" />
+                        <label for="qu7No">No</label>
+                        <input type="radio" id="qu7No" name="question7" />
+                        <label for="qu7Note">If yes, please explain</label>
+                        <input type="text" id="qu7Note" for="question7" />
+                    </li>
+                    <li>
+                        Question 8: 
+                        <label for="qu8Yes">Yes</label>
+                        <input type="radio" id="qu8Yes" name="question8" />
+                        <label for="qu8No">No</label>
+                        <input type="radio" id="qu8No" name="question8" />
+                        <label for="qu8Note">If yes, please explain</label>
+                        <input type="text" id="qu8Note" for="question8" />
+                    </li>
+                    <li>
+                        Question 9: 
+                        <label for="qu9Yes">Yes</label>
+                        <input type="radio" id="qu9Yes" name="question9" />
+                        <label for="qu9No">No</label>
+                        <input type="radio" id="qu9No" name="question9" />
+                        <label for="qu9Note">If yes, please explain</label>
+                        <input type="text" id="qu9Note" for="question9" />
+                    </li>
+                </ul>
+            </div>
+            <div id="women">
+                <fieldset>
+                    <legend>Women: Are you</legend>
+                    <div class="row">
+                        <div class="rowItem">
+                            Pregnant/Trying to get pregnant?
+                            <label for="pregnantYes">Yes</label>
+                            <input type="radio" id="pregnantYes" for="pregnant" />
+                            <label for="pregnantNo">No</label>
+                            <input type="radio" id="pregnantNo" for="pregnant" />
+                        </div>
+                        <div class="rowItem">
+                            Taking oral contraceptives?
+                            <label for="oralYes">Yes</label>
+                            <input type="radio" id="oralYes" for="contraceptive" />
+                            <label for="pregnantNo">No</label>
+                            <input type="radio" id="oralNo" for="contraceptive" />
+                        </div>
+                        <div class="rowItem">
+                            Nursing?
+                            <label for="pregnantYes">Yes</label>
+                            <input type="radio" id="nursingYes" for="nursing" />
+                            <label for="pregnantNo">No</label>
+                            <input type="radio" id="nursingtNo" for="nursing" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset>
+                <legend>Are you allergic to any of the following?</legend>
+                <div id="allergies">
+                    <label class="allergy"><input type="checkbox" name="aspirin" />Aspirin</label>
+                    <label class="allergy"><input type="checkbox" name="penicillin" />Penicillin</label>
+                    <label class="allergy"><input type="checkbox" name="codeine" />Codeine</label>
+                    <label class="allergy"><input type="checkbox" name="local anisthetics" />Local Anisthetics</label>
+                    <label class="allergy"><input type="checkbox" name="acrylic" />Acrylic</label>
+                    <label class="allergy"><input type="checkbox" name="metal" />Metal</label>
+                    <label class="allergy"><input type="checkbox" name="latex" />Latex</label>
+                    <label class="allergy"><input type="checkbox" name="sulfa drugs" />Sulfa Drugs</label>
+                    <label class="allergy"><input type="checkbox" name="other" />Other</label>
+                    <label for="otherAllegries">If yes, please explain</label>
+                    <input type="text" for="otherAllergies" name="otherAllergies" />
+                </div>
+            </fieldset>
+            <fieldset id="">
+                <div  class="wrappingColumns">
+                    <legend>Do you have, or have you had, any of the following?</legend>
+                    <ul id="">
+                        <li>
+                            <p class="question">Question 1:</p>
+                            <label class="answers" for="qu1Yes">Yes</label>
+                            <input class="answers" type="radio" id="qu1Yes" name="question1" />
+                            <label class="answers" for="qu1No">No</label>
+                            <input class="answers" type="radio" id="qu1No" name="question1" />
+                        </li>
+                        <li>
+                            Question 2: 
+                            <label for="qu2Yes">Yes</label>
+                            <input type="radio" id="qu2Yes" name="question2" />
+                            <label for="qu2No">No</label>
+                            <input type="radio" id="qu2No" name="question2" />
+                        </li>
+                        <li>
+                            Question 3: 
+                            <label for="qu3Yes">Yes</label>
+                            <input type="radio" id="qu3Yes" name="question3" />
+                            <label for="qu3No">No</label>
+                            <input type="radio" id="qu3No" name="question3" />
+                        </li>
+                        <li>
+                            Question 4: 
+                            <label for="qu4Yes">Yes</label>
+                            <input type="radio" id="qu4Yes" name="question4" />
+                            <label for="qu4No">No</label>
+                            <input type="radio" id="qu4No" name="question4" />
+                        </li>
+                        <li>
+                            Question 5: 
+                            <label for="qu5Yes">Yes</label>
+                            <input type="radio" id="qu5Yes" name="question5" />
+                            <label for="qu5No">No</label>
+                            <input type="radio" id="qu5No" name="question5" />
+                        </li>
+                        <li>
+                            Question 6: 
+                            <label for="qu6Yes">Yes</label>
+                            <input type="radio" id="qu6Yes" name="question6" />
+                            <label for="qu6No">No</label>
+                            <input type="radio" id="qu6No" name="question6" />
+                        </li>
+                        <li>
+                            Question 7: 
+                            <label for="qu7Yes">Yes</label>
+                            <input type="radio" id="qu7Yes" name="question7" />
+                            <label for="qu7No">No</label>
+                            <input type="radio" id="qu7No" name="question7" />
+                        </li>
+                        <li>
+                            Question 8: 
+                            <label for="qu8Yes">Yes</label>
+                            <input type="radio" id="qu8Yes" name="question8" />
+                            <label for="qu8No">No</label>
+                            <input type="radio" id="qu8No" name="question8" />
+                        </li>
+                        <li>
+                            Question 9: 
+                            <label for="qu9Yes">Yes</label>
+                            <input type="radio" id="qu9Yes" name="question9" />
+                            <label for="qu9No">No</label>
+                            <input type="radio" id="qu9No" name="question9" />
+                        </li>
+                        <li>
+                            Question 10: 
+                            <label for="qu10Yes">Yes</label>
+                            <input type="radio" id="qu10Yes" name="question10" />
+                            <label for="qu10No">No</label>
+                            <input type="radio" id="qu10No" name="question10" />
+                        </li>
+                        <li>
+                            Question 11: 
+                            <label for="qu11Yes">Yes</label>
+                            <input type="radio" id="qu11Yes" name="question11" />
+                            <label for="qu11No">No</label>
+                            <input type="radio" id="qu11No" name="question11" />
+                        </li>
+                        <li>
+                            Question 12: 
+                            <label for="qu12Yes">Yes</label>
+                            <input type="radio" id="qu12Yes" name="question12" />
+                            <label for="qu12No">No</label>
+                            <input type="radio" id="qu12No" name="question12" />
+                        </li>
+                        <li>
+                            Question 13: 
+                            <label for="qu13Yes">Yes</label>
+                            <input type="radio" id="qu13Yes" name="question13" />
+                            <label for="qu13No">No</label>
+                            <input type="radio" id="qu13No" name="question13" />
+                        </li>
+                        <li>
+                            Question 14: 
+                            <label for="qu14Yes">Yes</label>
+                            <input type="radio" id="qu14Yes" name="question14" />
+                            <label for="qu14No">No</label>
+                            <input type="radio" id="qu14No" name="question14" />
+                        </li>
+                        <li>
+                            Question 15: 
+                            <label for="qu15Yes">Yes</label>
+                            <input type="radio" id="qu15Yes" name="question15" />
+                            <label for="qu15No">No</label>
+                            <input type="radio" id="qu15No" name="question15" />
+                        </li>
+                        <li>
+                            Question 16: 
+                            <label for="qu16Yes">Yes</label>
+                            <input type="radio" id="qu16Yes" name="question16" />
+                            <label for="qu16No">No</label>
+                            <input type="radio" id="qu16No" name="question16" />
+                        </li>
+                        <li>
+                            Question 17: 
+                            <label for="qu17Yes">Yes</label>
+                            <input type="radio" id="qu17Yes" name="question17" />
+                            <label for="qu17No">No</label>
+                            <input type="radio" id="qu17No" name="question17" />
+                        </li>
+                        <li>
+                            Question 18: 
+                            <label for="qu18Yes">Yes</label>
+                            <input type="radio" id="qu18Yes" name="question18" />
+                            <label for="qu18No">No</label>
+                            <input type="radio" id="qu18No" name="question18" />
+                        </li>
+                        <li>
+                            Question 19: 
+                            <label for="qu19Yes">Yes</label>
+                            <input type="radio" id="qu19Yes" name="question19" />
+                            <label for="qu19No">No</label>
+                            <input type="radio" id="qu19No" name="question19" />
+                        </li>
+                        <li>
+                            Question 20: 
+                            <label for="qu20Yes">Yes</label>
+                            <input type="radio" id="qu20Yes" name="question20" />
+                            <label for="qu20No">No</label>
+                            <input type="radio" id="qu20No" name="question20" />
+                        </li>
+                        <li>
+                            Question 21: 
+                            <label for="qu21Yes">Yes</label>
+                            <input type="radio" id="qu21Yes" name="question21" />
+                            <label for="qu21No">No</label>
+                            <input type="radio" id="qu21No" name="question21" />
+                        </li>
+                        <li>
+                            Question 22: 
+                            <label for="qu22Yes">Yes</label>
+                            <input type="radio" id="qu22Yes" name="question22" />
+                            <label for="qu22No">No</label>
+                            <input type="radio" id="qu22No" name="question22" />
+                        </li>
+                        <li>
+                            Question 23: 
+                            <label for="qu23Yes">Yes</label>
+                            <input type="radio" id="qu23Yes" name="question23" />
+                            <label for="qu23No">No</label>
+                            <input type="radio" id="qu23No" name="question23" />
+                        </li>
+                        <li>
+                            Question 24: 
+                            <label for="qu24Yes">Yes</label>
+                            <input type="radio" id="qu24Yes" name="question24" />
+                            <label for="qu24No">No</label>
+                            <input type="radio" id="qu24No" name="question24" />
+                        </li>
+                        <li>
+                            Question 25: 
+                            <label for="qu25Yes">Yes</label>
+                            <input type="radio" id="qu25Yes" name="question25" />
+                            <label for="qu25No">No</label>
+                            <input type="radio" id="qu25No" name="question25" />
+                        </li>
+                        <li>
+                            Question 26: 
+                            <label for="qu26Yes">Yes</label>
+                            <input type="radio" id="qu26Yes" name="question26" />
+                            <label for="qu26No">No</label>
+                            <input type="radio" id="qu26No" name="question26" />
+                        </li>
+                        <li>
+                            Question 27: 
+                            <label for="qu27Yes">Yes</label>
+                            <input type="radio" id="qu27Yes" name="question27" />
+                            <label for="qu27No">No</label>
+                            <input type="radio" id="qu27No" name="question27" />
+                        </li>
+                        <li>
+                            Question 28: 
+                            <label for="qu28Yes">Yes</label>
+                            <input type="radio" id="qu28Yes" name="question28" />
+                            <label for="qu28No">No</label>
+                            <input type="radio" id="qu28No" name="question28" />
+                        </li>
+                        <li>
+                            Question 29: 
+                            <label for="qu29Yes">Yes</label>
+                            <input type="radio" id="qu29Yes" name="question29" />
+                            <label for="qu29No">No</label>
+                            <input type="radio" id="qu29No" name="question29" />
+                        </li>
+                        <li>
+                            Question 30: 
+                            <label for="qu30Yes">Yes</label>
+                            <input type="radio" id="qu30Yes" name="question30" />
+                            <label for="qu30No">No</label>
+                            <input type="radio" id="qu30No" name="question30" />
+                        </li>
+                        <li>
+                            Question 31: 
+                            <label for="qu31Yes">Yes</label>
+                            <input type="radio" id="qu31Yes" name="question31" />
+                            <label for="qu31No">No</label>
+                            <input type="radio" id="qu31No" name="question31" />
+                        </li>
+                        <li>
+                            Question 32: 
+                            <label for="qu32Yes">Yes</label>
+                            <input type="radio" id="qu32Yes" name="question32" />
+                            <label for="qu32No">No</label>
+                            <input type="radio" id="qu32No" name="question32" />
+                        </li>
+                        <li>
+                            Question 33: 
+                            <label for="qu33Yes">Yes</label>
+                            <input type="radio" id="qu33Yes" name="question33" />
+                            <label for="qu33No">No</label>
+                            <input type="radio" id="qu33No" name="question33" />
+                        </li>
+                        <li>
+                            Question 34: 
+                            <label for="qu34Yes">Yes</label>
+                            <input type="radio" id="qu34Yes" name="question34" />
+                            <label for="qu34No">No</label>
+                            <input type="radio" id="qu34No" name="question34" />
+                        </li>
+                        <li>
+                            Question 35: 
+                            <label for="qu35Yes">Yes</label>
+                            <input type="radio" id="qu35Yes" name="question35" />
+                            <label for="qu35No">No</label>
+                            <input type="radio" id="qu35No" name="question35" />
+                        </li>
+                        <li>
+                            Question 36: 
+                            <label for="qu36Yes">Yes</label>
+                            <input type="radio" id="qu36Yes" name="question36" />
+                            <label for="qu36No">No</label>
+                            <input type="radio" id="qu36No" name="question36" />
+                        </li>
+                        <li>
+                            Question 37: 
+                            <label for="qu37Yes">Yes</label>
+                            <input type="radio" id="qu37Yes" name="question37" />
+                            <label for="qu37No">No</label>
+                            <input type="radio" id="qu37No" name="question37" />
+                        </li>
+                        <li>
+                            Question 38: 
+                            <label for="qu38Yes">Yes</label>
+                            <input type="radio" id="qu38Yes" name="question38" />
+                            <label for="qu38No">No</label>
+                            <input type="radio" id="qu38No" name="question38" />
+                        </li>
+                        <li>
+                            Question 39: 
+                            <label for="qu39Yes">Yes</label>
+                            <input type="radio" id="qu39Yes" name="question39" />
+                            <label for="qu39No">No</label>
+                            <input type="radio" id="qu39No" name="question39" />
+                        </li>
+                        <li>
+                            Question 40: 
+                            <label for="qu40Yes">Yes</label>
+                            <input type="radio" id="qu40Yes" name="question40" />
+                            <label for="qu40No">No</label>
+                            <input type="radio" id="qu40No" name="question40" />
+                        </li>
+                        <li>
+                            Question 41: 
+                            <label for="qu41Yes">Yes</label>
+                            <input type="radio" id="qu41Yes" name="question41" />
+                            <label for="qu41No">No</label>
+                            <input type="radio" id="qu41No" name="question41" />
+                        </li>
+                        <li>
+                            Question 42: 
+                            <label for="qu42Yes">Yes</label>
+                            <input type="radio" id="qu42Yes" name="question42" />
+                            <label for="qu42No">No</label>
+                            <input type="radio" id="qu42No" name="question42" />
+                        </li>
+                        <li>
+                            Question 43: 
+                            <label for="qu43Yes">Yes</label>
+                            <input type="radio" id="qu43Yes" name="question43" />
+                            <label for="qu43No">No</label>
+                            <input type="radio" id="qu43No" name="question43" />
+                        </li>
+                        <li>
+                            Question 44: 
+                            <label for="qu44Yes">Yes</label>
+                            <input type="radio" id="qu44Yes" name="question44" />
+                            <label for="qu44No">No</label>
+                            <input type="radio" id="qu44No" name="question44" />
+                        </li>
+                        <li>
+                            Question 45: 
+                            <label for="qu45Yes">Yes</label>
+                            <input type="radio" id="qu45Yes" name="question45" />
+                            <label for="qu45No">No</label>
+                            <input type="radio" id="qu45No" name="question45" />
+                        </li>
+                        <li>
+                            Question 46: 
+                            <label for="qu46Yes">Yes</label>
+                            <input type="radio" id="qu46Yes" name="question46" />
+                            <label for="qu46No">No</label>
+                            <input type="radio" id="qu46No" name="question46" />
+                        </li>
+                        <li>
+                            Question 47: 
+                            <label for="qu47Yes">Yes</label>
+                            <input type="radio" id="qu47Yes" name="question47" />
+                            <label for="qu47No">No</label>
+                            <input type="radio" id="qu47No" name="question47" />
+                        </li>
+                        <li>
+                            Question 48: 
+                            <label for="qu48Yes">Yes</label>
+                            <input type="radio" id="qu48Yes" name="question48" />
+                            <label for="qu48No">No</label>
+                            <input type="radio" id="qu48No" name="question48" />
+                        </li>
+                        <li>
+                            Question 49: 
+                            <label for="qu49Yes">Yes</label>
+                            <input type="radio" id="qu49Yes" name="question49" />
+                            <label for="qu49No">No</label>
+                            <input type="radio" id="qu49No" name="question49" />
+                        </li>
+                        <li>
+                            Question 50: 
+                            <label for="qu50Yes">Yes</label>
+                            <input type="radio" id="qu50Yes" name="question50" />
+                            <label for="qu50No">No</label>
+                            <input type="radio" id="qu50No" name="question50" />
+                        </li>
+                        <li>
+                            Question 51: 
+                            <label for="qu51Yes">Yes</label>
+                            <input type="radio" id="qu51Yes" name="question51" />
+                            <label for="qu51No">No</label>
+                            <input type="radio" id="qu51No" name="question51" />
+                        </li>
+                        <li>
+                            Question 52: 
+                            <label for="qu52Yes">Yes</label>
+                            <input type="radio" id="qu52Yes" name="question52" />
+                            <label for="qu52No">No</label>
+                            <input type="radio" id="qu52No" name="question52" />
+                        </li>
+                        <li>
+                            Question 53: 
+                            <label for="qu53Yes">Yes</label>
+                            <input type="radio" id="qu53Yes" name="question53" />
+                            <label for="qu53No">No</label>
+                            <input type="radio" id="qu53No" name="question53" />
+                        </li>
+                        <li>
+                            Question 54: 
+                            <label for="qu54Yes">Yes</label>
+                            <input type="radio" id="qu54Yes" name="question54" />
+                            <label for="qu54No">No</label>
+                            <input type="radio" id="qu54No" name="question54" />
+                        </li>
+                        <li>
+                            Question 55: 
+                            <label for="qu55Yes">Yes</label>
+                            <input type="radio" id="qu55Yes" name="question55" />
+                            <label for="qu55No">No</label>
+                            <input type="radio" id="qu55No" name="question55" />
+                        </li>
+                        <li>
+                            Question 56: 
+                            <label for="qu56Yes">Yes</label>
+                            <input type="radio" id="qu56Yes" name="question56" />
+                            <label for="qu56No">No</label>
+                            <input type="radio" id="qu56No" name="question56" />
+                        </li>
+                        <li>
+                            Question 57: 
+                            <label for="qu57Yes">Yes</label>
+                            <input type="radio" id="qu57Yes" name="question57" />
+                            <label for="qu57No">No</label>
+                            <input type="radio" id="qu57No" name="question57" />
+                        </li>
+                        <li>
+                            Question 58: 
+                            <label for="qu58Yes">Yes</label>
+                            <input type="radio" id="qu58Yes" name="question58" />
+                            <label for="qu58No">No</label>
+                            <input type="radio" id="qu58No" name="question58" />
+                        </li>
+                        <li>
+                            Question 59: 
+                            <label for="qu59Yes">Yes</label>
+                            <input type="radio" id="qu59Yes" name="question59" />
+                            <label for="qu59No">No</label>
+                            <input type="radio" id="qu59No" name="question59" />
+                        </li>
+                        <li>
+                            Question 60: 
+                            <label for="qu60Yes">Yes</label>
+                            <input type="radio" id="qu60Yes" name="question60" />
+                            <label for="qu60No">No</label>
+                            <input type="radio" id="qu60No" name="question60" />
+                        </li>
+                        <li>
+                            Question 61: 
+                            <label for="qu61Yes">Yes</label>
+                            <input type="radio" id="qu61Yes" name="question61" />
+                            <label for="qu61No">No</label>
+                            <input type="radio" id="qu61No" name="question61" />
+                        </li>
+                        <li>
+                            Question 62: 
+                            <label for="qu62Yes">Yes</label>
+                            <input type="radio" id="qu62Yes" name="question62" />
+                            <label for="qu62No">No</label>
+                            <input type="radio" id="qu62No" name="question62" />
+                        </li>
+                        <li>
+                            Question 63: 
+                            <label for="qu63Yes">Yes</label>
+                            <input type="radio" id="qu63Yes" name="question63" />
+                            <label for="qu63No">No</label>
+                            <input type="radio" id="qu63No" name="question63" />
+                        </li>
+                        <li>
+                            Question 64: 
+                            <label for="qu64Yes">Yes</label>
+                            <input type="radio" id="qu64Yes" name="question64" />
+                            <label for="qu64No">No</label>
+                            <input type="radio" id="qu64No" name="question64" />
+                        </li>
+                        <li>
+                            Question 65: 
+                            <label for="qu65Yes">Yes</label>
+                            <input type="radio" id="qu65Yes" name="question65" />
+                            <label for="qu65No">No</label>
+                            <input type="radio" id="qu65No" name="question65" />
+                        </li>
+                        <li>
+                            Question 66: 
+                            <label for="qu66Yes">Yes</label>
+                            <input type="radio" id="qu66Yes" name="question66" />
+                            <label for="qu66No">No</label>
+                            <input type="radio" id="qu66No" name="question66" />
+                        </li>
+                        <li>
+                            Question 67: 
+                            <label for="qu67Yes">Yes</label>
+                            <input type="radio" id="qu67Yes" name="question67" />
+                            <label for="qu67No">No</label>
+                            <input type="radio" id="qu67No" name="question67" />
+                        </li>
+                        <li>
+                            Question 68: 
+                            <label for="qu68Yes">Yes</label>
+                            <input type="radio" id="qu68Yes" name="question68" />
+                            <label for="qu68No">No</label>
+                            <input type="radio" id="qu68No" name="question68" />
+                        </li>
+                        <li>
+                            Question 69: 
+                            <label for="qu69Yes">Yes</label>
+                            <input type="radio" id="qu69Yes" name="question69" />
+                            <label for="qu69No">No</label>
+                            <input type="radio" id="qu69No" name="question69" />
+                        </li>
+                        <li>
+                            Question 70: 
+                            <label for="qu70Yes">Yes</label>
+                            <input type="radio" id="qu70Yes" name="question70" />
+                            <label for="qu70No">No</label>
+                            <input type="radio" id="qu70No" name="question70" />
+                        </li>
+                        <li>
+                            Question 71: 
+                            <label for="qu71Yes">Yes</label>
+                            <input type="radio" id="qu71Yes" name="question71" />
+                            <label for="qu71No">No</label>
+                            <input type="radio" id="qu71No" name="question71" />
+                        </li>
+                        <li>
+                            Question 72: 
+                            <label for="qu72Yes">Yes</label>
+                            <input type="radio" id="qu72Yes" name="question72" />
+                            <label for="qu72No">No</label>
+                            <input type="radio" id="qu72No" name="question72" />
+                        </li>
+                        <li>
+                            Question 73: 
+                            <label for="qu73Yes">Yes</label>
+                            <input type="radio" id="qu73Yes" name="question73" />
+                            <label for="qu73No">No</label>
+                            <input type="radio" id="qu73No" name="question73" />
+                        </li>
+                        <li>
+                            Question 74: 
+                            <label for="qu74Yes">Yes</label>
+                            <input type="radio" id="qu74Yes" name="question74" />
+                            <label for="qu74No">No</label>
+                            <input type="radio" id="qu74No" name="question74" />
+                        </li>
+                        <li>
+                            Question 75: 
+                            <label for="qu75Yes">Yes</label>
+                            <input type="radio" id="qu75Yes" name="question75" />
+                            <label for="qu75No">No</label>
+                            <input type="radio" id="qu75No" name="question75" />
+                        </li>
+                        <li>
+                            Question 76: 
+                            <label for="qu76Yes">Yes</label>
+                            <input type="radio" id="qu76Yes" name="question76" />
+                            <label for="qu76No">No</label>
+                            <input type="radio" id="qu76No" name="question76" />
+                        </li>
+                        <li>
+                            Question 77: 
+                            <label for="qu77Yes">Yes</label>
+                            <input type="radio" id="qu77Yes" name="question77" />
+                            <label for="qu77No">No</label>
+                            <input type="radio" id="qu77No" name="question77" />
+                        </li>
+                        <li>
+                            Question 78: 
+                            <label for="qu78Yes">Yes</label>
+                            <input type="radio" id="qu78Yes" name="question78" />
+                            <label for="qu78No">No</label>
+                            <input type="radio" id="qu78No" name="question78" />
+                        </li>
+                        <li>
+                            Question 79: 
+                            <label for="qu79Yes">Yes</label>
+                            <input type="radio" id="qu79Yes" name="question79" />
+                            <label for="qu79No">No</label>
+                            <input type="radio" id="qu79No" name="question78" />
+                        </li>
+                        <li>
+                            Question 80: 
+                            <label for="qu80Yes">Yes</label>
+                            <input type="radio" id="qu80Yes" name="question80" />
+                            <label for="qu80No">No</label>
+                            <input type="radio" id="qu80No" name="question80" />
+                        </li>
+                    </ul>
+                </div>
+                <p>Have you had any serious illness not list above?
+                    <label for="otherIllness">Yes</label>
+                    <input type="radio" id="otherIllnessYes" for="otherIllness" />
+                    <label for="otherIllnessNo">No</label>
+                    <input type="radio" id="otherIllnessNo" for="otherIllness" />
+                    <label for="otherIllness">If yes, please explain</label>
+                    <input type="text" id="otherIllness" name="otherIllness" />
+                </p>
+            </fieldset>
+            <!-- <fieldset class="noBorder"> -->
+                <p>Comments</p>
+                <textarea rows="8" cols="100"></textarea>
+            <!-- </fieldset> -->
+            <div id="signature">
+                <p>To the best of my knowledge, the questions on this form have been accurately answered. I understand that providing incorrect information can be dangerous to my (or patient's) health. It is my responsibility to infomr the dental office of any changes in medical status.</p>
+                <label for="signature">SIGNATURE OF PATIENT, PARENT OR GUARDIAN</label>
+                <input type="text" id="signature" name="signature" size="80"/>
+                <label for="signatureDate">DATE</label>
+                <input type="date" id="signatureDate" name="signatureDate" />
+            </div>
+            </div>
+        </form>
+    </body>
+</html>
